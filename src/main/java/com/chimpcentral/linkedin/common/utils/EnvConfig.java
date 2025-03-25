@@ -2,13 +2,11 @@ package com.chimpcentral.linkedin.common.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.FileSystems;
 import java.util.Properties;
-import java.util.StringJoiner;
 
-public class DotEnv {
+public class EnvConfig {
 
-    private static final String FILENAME = ".env";
+    private static final String ENV_FILENAME = ".env";
 
     static Properties properties;
     public static String linkedInEmail;
@@ -17,7 +15,7 @@ public class DotEnv {
     public static void load() {
         if (properties != null) return;
         properties = new Properties();
-        try (FileInputStream fileInputStream = new FileInputStream(FILENAME)) {
+        try (FileInputStream fileInputStream = new FileInputStream(ENV_FILENAME)) {
             properties.load(fileInputStream);
             linkedInEmail = properties.getProperty("linkedin-email");
             linkedInPassword = properties.getProperty("linkedin-password");

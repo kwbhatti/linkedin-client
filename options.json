@@ -1,0 +1,22 @@
+{
+  "scrapeJobs": [
+    {
+      "jobTitle": "SDET",
+      "location": "Aldie, Virginia",
+      "experienceLevel": "Mid-Senior level",
+      "remote": true
+    },
+    {
+      "jobTitle": "Software Development Engineer In Test",
+      "location": "Aldie, Virginia",
+      "experienceLevel": "Mid-Senior level",
+      "remote": true
+    },
+    {
+      "jobTitle": "QA Manager",
+      "location": "Aldie, Virginia",
+      "experienceLevel": "Mid-Senior level",
+      "remote": true
+    }
+  ]
+}

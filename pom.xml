@@ -13,6 +13,7 @@
 		<maven.javadoc.plugin>3.11.2</maven.javadoc.plugin>
 		<testng.version>7.7.1</testng.version>
 		<selenide.version>7.7.3</selenide.version>
+		<jackson-databind.vesion>2.18.3</jackson-databind.vesion>
 		<compiler.plugin.version>3.8.0</compiler.plugin.version>
 		<surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
 		<nexus.staging.maven.plugin>1.6.8</nexus.staging.maven.plugin>
@@ -45,6 +46,11 @@
 			<groupId>com.codeborne</groupId>
 			<artifactId>selenide</artifactId>
 			<version>${selenide.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson-databind.vesion}</version>
 		</dependency>
 	</dependencies>
 	<profiles>

@@ -12,6 +12,6 @@ public class LinkedInUITests {
     @Test
     void scrapeJobs() {
 
-        List<JobInfo> jobInfoList = LinkedInUI.actions.jobsActions.scrapeJobs(new JobsActions.Options());
+        List<JobInfo> jobInfoList = LinkedInUI.jobsActions.scrapeJobs();
     }
 }
