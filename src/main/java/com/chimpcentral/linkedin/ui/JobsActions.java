@@ -10,7 +10,7 @@ public class JobsActions {
 
 
     public List<JobInfo> scrapeJobs(Options options) {
-        LinkedInUI.open();
+
         Wait.forDuration(Duration.ofSeconds(10));
         return null;
     }
