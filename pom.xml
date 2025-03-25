@@ -1,26 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.chimp-central</groupId>
-	<!-- updated below -->
-	<artifactId>maven-publish-template</artifactId>
-	<!-- updated below -->
+	<artifactId>linkedin-client</artifactId>
 	<version>1.0.0</version>
-	<!-- updated below -->
-	<name>Maven Publish Template</name>
-	<!-- updated below -->
-	<description>Template for publishing to Maven Central</description>
-	<!-- updated below -->
+	<name>LinkedIn Client</name>
+	<description>Client to interact with LinkedIn</description>
 	<url>https://chimp-central.com/</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<maven.source.plugin>3.2.1</maven.source.plugin>
-		<maven.javadoc.plugin>3.2.0</maven.javadoc.plugin>
-		<testng.version>6.14.3</testng.version>
+		<java.version>17</java.version>
+		<maven.source.plugin>3.3.1</maven.source.plugin>
+		<maven.javadoc.plugin>3.11.2</maven.javadoc.plugin>
+		<testng.version>7.7.1</testng.version>
+		<selenide.version>7.7.3</selenide.version>
 		<compiler.plugin.version>3.8.0</compiler.plugin.version>
 		<surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
 		<nexus.staging.maven.plugin>1.6.8</nexus.staging.maven.plugin>
-		<maven.gpg.plugin>1.6</maven.gpg.plugin>
+		<maven.gpg.plugin>3.2.7</maven.gpg.plugin>
 	</properties>
 	<licenses>
 		<license>
@@ -34,17 +30,21 @@
 			<email>test-monkey@chimp-central.com</email>
 		</developer>
 	</developers>
-	<!-- updated below -->
 	<scm>
-		<connection>scm:git:git@github.com:kwbhatti/maven-publish-template.git</connection>
-		<developerConnection>scm:git:ssh://github.com:kwbhatti/maven-publish-template.git</developerConnection>
-		<url>https://github.com/kwbhatti/maven-publish-template.git/tree/master</url>
+		<connection>scm:git:git@github.com:kwbhatti/linkedin-client.git</connection>
+		<developerConnection>scm:git:ssh://github.com:kwbhatti/linkedin-client.git</developerConnection>
+		<url>https://github.com/kwbhatti/linkedin-client.git/tree/master</url>
 	</scm>
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>${testng.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.codeborne</groupId>
+			<artifactId>selenide</artifactId>
+			<version>${selenide.version}</version>
 		</dependency>
 	</dependencies>
 	<profiles>
@@ -72,6 +72,7 @@
 							<suiteXmlFiles>
 								<suiteXmlFile>testng.xml</suiteXmlFile>
 							</suiteXmlFiles>
+							<!--suppress UnresolvedMavenProperty -->
 							<groups>${groups}</groups>
 						</configuration>
 					</plugin>
